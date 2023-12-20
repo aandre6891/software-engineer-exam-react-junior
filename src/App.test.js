@@ -1,5 +1,6 @@
 import { render, screen } from '@testing-library/react';
 import App from './App';
+import userEvent from '@testing-library/user-event';
 
 describe('App', () => {
   const fields = [
@@ -19,6 +20,18 @@ describe('App', () => {
     fields.forEach((field) => {
       const labelElement = screen.getByText(field.label);
       expect(labelElement).toBeInTheDocument();
+    });
+  });
+
+  test('focus changes when clicking on the label', () => {
+    render(<App />);
+    fields.forEach((field) => {
+      const labelElement = screen.getByText(field.label);
+      const inputElement = screen.getByLabelText(field.label);
+
+      userEvent.click(labelElement);
+
+      expect(document.activeElement).toBe(inputElement);
     });
   });
 
