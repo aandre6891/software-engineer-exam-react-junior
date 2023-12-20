@@ -1,7 +1,11 @@
-import React from 'react'
+import { useState } from 'react'
 
-export default function New({text}) {
+export default function New({ text }) {
+  const [visibleText, setVisibleText] = useState(text)
+
+  const changeToWorld = () => setVisibleText("world");
+
   return (
-    <span>{text}</span>
+    <span onClick={changeToWorld}>{visibleText}</span>
   )
 }
