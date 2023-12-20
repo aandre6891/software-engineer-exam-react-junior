@@ -1,7 +1,7 @@
 import React from 'react'
 
-export default function New() {
+export default function New({text}) {
   return (
-    <div>New</div>
+    <span>{text}</span>
   )
 }

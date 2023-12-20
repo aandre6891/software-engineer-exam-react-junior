@@ -24,7 +24,7 @@ class App extends React.Component {
 						</div>
 					))}
 				</form>
-				<New />
+				<New text="hello" />
 			</div>
 
 		);
