@@ -18,8 +18,8 @@ class App extends React.Component {
 				<form>
 					{fields.map(field => (
 						<>
-							<label>{field.label}</label>
-							<input name={field.name} type={field.type}></input>
+							<label htmlFor={field.name}>{field.label}</label>
+							<input id={field.name} type={field.type}></input>
 						</>
 					))}
 				</form>
