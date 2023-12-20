@@ -1,4 +1,4 @@
-# App.js Component
+# App.js
 
 App.js is a simple React application that dinamically renders a form based on the given fields.
 
